@@ -10,54 +10,51 @@ namespace Kursovaya
     {
         public int CardNumber;
         public int WorkCost;
-
+        public string Familiya;
+        public string Inichialy;
         public string FullName;
         public string TypeOfWork;
+        public int Payment;
 
-        public bool Payment;
-
-        public string Dolg;
-
-        public Stomat(int CardNumber, string FullName, string TypeOfWork, int WorkCost, bool Payment, string Dolg)
+        public Stomat(int CardNumber, string Familiya,string Inichialy, string TypeOfWork, int WorkCost, int Payment)
         {
             this.CardNumber = CardNumber;
-
-            this.FullName = FullName;
-
+            this.Familiya = Familiya;
+            this.Inichialy = Inichialy;
             this.TypeOfWork = TypeOfWork;
-
             this.WorkCost = WorkCost;
-
             this.Payment = Payment;
-
-            this.Dolg = Dolg;
-
         }
 
-        public String Zamena ()
+        public string getFullName() //произвожу склейку фамилии и инициалов
         {
-            return this.Payment? "+" : " ";
+            string FullName = Familiya + " " + Inichialy;
+            return FullName;
         }
 
-        public String EstDolg ()
+        public string getFamiliya() //возвращаю только фамилию для поиска в дальнейшем
         {
-            return this.Payment ? "": WorkCost.ToString();
+            return Familiya;
+        }
+
+        public String Zamena () //ставит + или же пробел в столбе об отметке оплаты
+        {
+            return this.Payment == 1 ? "+" : "-";
+        }
+
+        public String EstDolg () //если нет долга, то пустая колонка, если есть, то возвращает сумму долга
+        {
+            return this.Payment == 1 ? "0": WorkCost.ToString();
+        }
+
+        public string Perevod()
+        {
+            return this.Payment == 1 ? WorkCost.ToString() : "0";
         }
 
         public String Peredacha()
         {
             return (CardNumber == -1 )? "" : CardNumber.ToString();
         }
-
-       
-
-        public static Stomat SozdatPustoy(int CardNumber,int WorkCost)
-        {
-            Stomat pustayaKarta = new Stomat(CardNumber, null, null, WorkCost, false, null);
-           
-            return pustayaKarta;
-        }
-
-
     }
 }

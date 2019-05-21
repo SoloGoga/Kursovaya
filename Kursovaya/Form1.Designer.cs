@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Tablitca = new System.Windows.Forms.DataGridView();
-            this.FIO = new System.Windows.Forms.TextBox();
-            this.CardNumber = new System.Windows.Forms.NumericUpDown();
+            this.FamiliyaBox = new System.Windows.Forms.TextBox();
+            this.CardNumberNumeric = new System.Windows.Forms.NumericUpDown();
             this.CostOfWork = new System.Windows.Forms.NumericUpDown();
             this.AddButton = new System.Windows.Forms.Button();
             this.SearchNameButt = new System.Windows.Forms.Button();
@@ -50,10 +50,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.PassTextBox = new System.Windows.Forms.TextBox();
             this.Consol = new System.Windows.Forms.TextBox();
-            this.TypeOfWork = new System.Windows.Forms.TextBox();
-            this.SearchType = new System.Windows.Forms.TextBox();
+            this.TypeOfWorkBox = new System.Windows.Forms.TextBox();
+            this.SearchTypeBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Payment = new System.Windows.Forms.NumericUpDown();
+            this.PaymentNumerical = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.NameAndOtchestvo = new System.Windows.Forms.TextBox();
+            this.ConsoleClear = new System.Windows.Forms.Button();
             this.ColumnCardNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnVidRaboti = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +65,9 @@
             this.ColumnDolg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Tablitca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardNumberNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostOfWork)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Payment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentNumerical)).BeginInit();
             this.SuspendLayout();
             // 
             // Tablitca
@@ -89,30 +92,30 @@
             this.Tablitca.ReadOnly = true;
             this.Tablitca.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Tablitca.RowHeadersVisible = false;
-            this.Tablitca.Size = new System.Drawing.Size(712, 270);
+            this.Tablitca.Size = new System.Drawing.Size(721, 270);
             this.Tablitca.StandardTab = true;
             this.Tablitca.TabIndex = 0;
             this.Tablitca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tablitca_CellContentClick);
             // 
-            // FIO
+            // FamiliyaBox
             // 
-            this.FIO.Location = new System.Drawing.Point(98, 46);
-            this.FIO.Name = "FIO";
-            this.FIO.Size = new System.Drawing.Size(93, 20);
-            this.FIO.TabIndex = 1;
+            this.FamiliyaBox.Location = new System.Drawing.Point(97, 42);
+            this.FamiliyaBox.Name = "FamiliyaBox";
+            this.FamiliyaBox.Size = new System.Drawing.Size(93, 20);
+            this.FamiliyaBox.TabIndex = 2;
             // 
-            // CardNumber
+            // CardNumberNumeric
             // 
-            this.CardNumber.Location = new System.Drawing.Point(98, 7);
-            this.CardNumber.Minimum = new decimal(new int[] {
+            this.CardNumberNumeric.Location = new System.Drawing.Point(98, 7);
+            this.CardNumberNumeric.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.CardNumber.Name = "CardNumber";
-            this.CardNumber.Size = new System.Drawing.Size(92, 20);
-            this.CardNumber.TabIndex = 3;
-            this.CardNumber.Value = new decimal(new int[] {
+            this.CardNumberNumeric.Name = "CardNumberNumeric";
+            this.CardNumberNumeric.Size = new System.Drawing.Size(92, 20);
+            this.CardNumberNumeric.TabIndex = 1;
+            this.CardNumberNumeric.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -120,7 +123,7 @@
             // 
             // CostOfWork
             // 
-            this.CostOfWork.Location = new System.Drawing.Point(98, 129);
+            this.CostOfWork.Location = new System.Drawing.Point(98, 150);
             this.CostOfWork.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -133,7 +136,7 @@
             0});
             this.CostOfWork.Name = "CostOfWork";
             this.CostOfWork.Size = new System.Drawing.Size(93, 20);
-            this.CostOfWork.TabIndex = 4;
+            this.CostOfWork.TabIndex = 5;
             this.CostOfWork.Value = new decimal(new int[] {
             100,
             0,
@@ -142,7 +145,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(10, 208);
+            this.AddButton.Location = new System.Drawing.Point(10, 227);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(181, 50);
             this.AddButton.TabIndex = 7;
@@ -155,18 +158,19 @@
             this.SearchNameButt.Location = new System.Drawing.Point(118, 312);
             this.SearchNameButt.Name = "SearchNameButt";
             this.SearchNameButt.Size = new System.Drawing.Size(93, 20);
-            this.SearchNameButt.TabIndex = 8;
+            this.SearchNameButt.TabIndex = 9;
             this.SearchNameButt.Text = "Найти";
             this.SearchNameButt.UseVisualStyleBackColor = true;
+            this.SearchNameButt.Click += new System.EventHandler(this.SearchNameButt_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 46);
+            this.label1.Location = new System.Drawing.Point(1, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 10;
-            this.label1.Text = "ФИО пациента";
+            this.label1.Text = "Фамилия";
             // 
             // label2
             // 
@@ -180,7 +184,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 88);
+            this.label3.Location = new System.Drawing.Point(1, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 12;
@@ -189,7 +193,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 129);
+            this.label4.Location = new System.Drawing.Point(2, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 26);
             this.label4.TabIndex = 13;
@@ -200,7 +204,7 @@
             this.SearchNameTextBox.Location = new System.Drawing.Point(5, 312);
             this.SearchNameTextBox.Name = "SearchNameTextBox";
             this.SearchNameTextBox.Size = new System.Drawing.Size(93, 20);
-            this.SearchNameTextBox.TabIndex = 14;
+            this.SearchNameTextBox.TabIndex = 8;
             // 
             // label5
             // 
@@ -225,18 +229,20 @@
             this.SearchTypeButt.Location = new System.Drawing.Point(392, 311);
             this.SearchTypeButt.Name = "SearchTypeButt";
             this.SearchTypeButt.Size = new System.Drawing.Size(93, 21);
-            this.SearchTypeButt.TabIndex = 18;
+            this.SearchTypeButt.TabIndex = 11;
             this.SearchTypeButt.Text = "Найти";
             this.SearchTypeButt.UseVisualStyleBackColor = true;
+            this.SearchTypeButt.Click += new System.EventHandler(this.SearchTypeButt_Click);
             // 
             // SearchDolgButt
             // 
             this.SearchDolgButt.Location = new System.Drawing.Point(516, 311);
             this.SearchDolgButt.Name = "SearchDolgButt";
             this.SearchDolgButt.Size = new System.Drawing.Size(140, 21);
-            this.SearchDolgButt.TabIndex = 19;
+            this.SearchDolgButt.TabIndex = 12;
             this.SearchDolgButt.Text = "Найти должников";
             this.SearchDolgButt.UseVisualStyleBackColor = true;
+            this.SearchDolgButt.Click += new System.EventHandler(this.SearchDolgButt_Click);
             // 
             // label7
             // 
@@ -261,18 +267,20 @@
             this.DeleteDolgButt.Location = new System.Drawing.Point(682, 310);
             this.DeleteDolgButt.Name = "DeleteDolgButt";
             this.DeleteDolgButt.Size = new System.Drawing.Size(93, 21);
-            this.DeleteDolgButt.TabIndex = 22;
+            this.DeleteDolgButt.TabIndex = 13;
             this.DeleteDolgButt.Text = "Удалить";
             this.DeleteDolgButt.UseVisualStyleBackColor = true;
+            this.DeleteDolgButt.Click += new System.EventHandler(this.DeleteDolgButt_Click);
             // 
             // PassButton
             // 
             this.PassButton.Location = new System.Drawing.Point(196, 364);
             this.PassButton.Name = "PassButton";
             this.PassButton.Size = new System.Drawing.Size(109, 20);
-            this.PassButton.TabIndex = 24;
+            this.PassButton.TabIndex = 15;
             this.PassButton.Text = "Ввод";
             this.PassButton.UseVisualStyleBackColor = true;
+            this.PassButton.Click += new System.EventHandler(this.PassButton_Click);
             // 
             // label9
             // 
@@ -288,7 +296,8 @@
             this.PassTextBox.Location = new System.Drawing.Point(7, 364);
             this.PassTextBox.Name = "PassTextBox";
             this.PassTextBox.Size = new System.Drawing.Size(183, 20);
-            this.PassTextBox.TabIndex = 26;
+            this.PassTextBox.TabIndex = 14;
+            this.PassTextBox.Text = "Введите пароль";
             // 
             // Consol
             // 
@@ -297,43 +306,69 @@
             this.Consol.Name = "Consol";
             this.Consol.ReadOnly = true;
             this.Consol.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Consol.Size = new System.Drawing.Size(582, 64);
+            this.Consol.Size = new System.Drawing.Size(582, 99);
             this.Consol.TabIndex = 27;
             // 
-            // TypeOfWork
+            // TypeOfWorkBox
             // 
-            this.TypeOfWork.Location = new System.Drawing.Point(98, 88);
-            this.TypeOfWork.Name = "TypeOfWork";
-            this.TypeOfWork.Size = new System.Drawing.Size(93, 20);
-            this.TypeOfWork.TabIndex = 28;
+            this.TypeOfWorkBox.Location = new System.Drawing.Point(98, 112);
+            this.TypeOfWorkBox.Name = "TypeOfWorkBox";
+            this.TypeOfWorkBox.Size = new System.Drawing.Size(93, 20);
+            this.TypeOfWorkBox.TabIndex = 4;
             // 
-            // SearchType
+            // SearchTypeBox
             // 
-            this.SearchType.Location = new System.Drawing.Point(252, 310);
-            this.SearchType.Name = "SearchType";
-            this.SearchType.Size = new System.Drawing.Size(106, 20);
-            this.SearchType.TabIndex = 29;
+            this.SearchTypeBox.Location = new System.Drawing.Point(252, 310);
+            this.SearchTypeBox.Name = "SearchTypeBox";
+            this.SearchTypeBox.Size = new System.Drawing.Size(106, 20);
+            this.SearchTypeBox.TabIndex = 10;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 170);
+            this.label10.Location = new System.Drawing.Point(3, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 26);
             this.label10.TabIndex = 30;
             this.label10.Text = "Пациент заплатил \r\n(0 - нет, 1 - да)";
             // 
-            // Payment
+            // PaymentNumerical
             // 
-            this.Payment.Location = new System.Drawing.Point(118, 170);
-            this.Payment.Maximum = new decimal(new int[] {
+            this.PaymentNumerical.Location = new System.Drawing.Point(118, 185);
+            this.PaymentNumerical.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(73, 20);
-            this.Payment.TabIndex = 32;
+            this.PaymentNumerical.Name = "PaymentNumerical";
+            this.PaymentNumerical.Size = new System.Drawing.Size(73, 20);
+            this.PaymentNumerical.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(1, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Инициалы полностью";
+            // 
+            // NameAndOtchestvo
+            // 
+            this.NameAndOtchestvo.Location = new System.Drawing.Point(129, 77);
+            this.NameAndOtchestvo.Name = "NameAndOtchestvo";
+            this.NameAndOtchestvo.Size = new System.Drawing.Size(60, 20);
+            this.NameAndOtchestvo.TabIndex = 3;
+            // 
+            // ConsoleClear
+            // 
+            this.ConsoleClear.Location = new System.Drawing.Point(196, 390);
+            this.ConsoleClear.Name = "ConsoleClear";
+            this.ConsoleClear.Size = new System.Drawing.Size(109, 58);
+            this.ConsoleClear.TabIndex = 16;
+            this.ConsoleClear.Text = "Очистить консоль";
+            this.ConsoleClear.UseVisualStyleBackColor = true;
+            this.ConsoleClear.Click += new System.EventHandler(this.ConsoleClear_Click);
             // 
             // ColumnCardNum
             // 
@@ -341,6 +376,7 @@
             this.ColumnCardNum.HeaderText = "№ карточки";
             this.ColumnCardNum.Name = "ColumnCardNum";
             this.ColumnCardNum.ReadOnly = true;
+            this.ColumnCardNum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ColumnNSS
             // 
@@ -393,11 +429,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 425);
-            this.Controls.Add(this.Payment);
+            this.ClientSize = new System.Drawing.Size(929, 460);
+            this.Controls.Add(this.ConsoleClear);
+            this.Controls.Add(this.NameAndOtchestvo);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.PaymentNumerical);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.SearchType);
-            this.Controls.Add(this.TypeOfWork);
+            this.Controls.Add(this.SearchTypeBox);
+            this.Controls.Add(this.TypeOfWorkBox);
             this.Controls.Add(this.Consol);
             this.Controls.Add(this.PassTextBox);
             this.Controls.Add(this.label9);
@@ -417,25 +456,24 @@
             this.Controls.Add(this.SearchNameButt);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CostOfWork);
-            this.Controls.Add(this.CardNumber);
-            this.Controls.Add(this.FIO);
+            this.Controls.Add(this.CardNumberNumeric);
+            this.Controls.Add(this.FamiliyaBox);
             this.Controls.Add(this.Tablitca);
             this.HelpButton = true;
             this.Name = "Form1";
             this.Text = "База пациентов зубного врача";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tablitca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardNumberNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostOfWork)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Payment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentNumerical)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox FIO;
-        private System.Windows.Forms.NumericUpDown CardNumber;
+        private System.Windows.Forms.TextBox FamiliyaBox;
+        private System.Windows.Forms.NumericUpDown CardNumberNumeric;
         private System.Windows.Forms.NumericUpDown CostOfWork;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button SearchNameButt;
@@ -456,10 +494,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox PassTextBox;
         private System.Windows.Forms.TextBox Consol;
-        private System.Windows.Forms.TextBox TypeOfWork;
-        private System.Windows.Forms.TextBox SearchType;
+        private System.Windows.Forms.TextBox TypeOfWorkBox;
+        private System.Windows.Forms.TextBox SearchTypeBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown Payment;
+        private System.Windows.Forms.NumericUpDown PaymentNumerical;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox NameAndOtchestvo;
+        private System.Windows.Forms.Button ConsoleClear;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCardNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNSS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVidRaboti;
