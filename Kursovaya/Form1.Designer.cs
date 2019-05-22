@@ -57,6 +57,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.NameAndOtchestvo = new System.Windows.Forms.TextBox();
             this.ConsoleClear = new System.Windows.Forms.Button();
+            this.ImportButt = new System.Windows.Forms.Button();
+            this.ExportButt = new System.Windows.Forms.Button();
             this.ColumnCardNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnVidRaboti = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +97,7 @@
             this.Tablitca.Size = new System.Drawing.Size(721, 270);
             this.Tablitca.StandardTab = true;
             this.Tablitca.TabIndex = 0;
+            this.Tablitca.Visible = false;
             this.Tablitca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tablitca_CellContentClick);
             // 
             // FamiliyaBox
@@ -103,10 +106,16 @@
             this.FamiliyaBox.Name = "FamiliyaBox";
             this.FamiliyaBox.Size = new System.Drawing.Size(93, 20);
             this.FamiliyaBox.TabIndex = 2;
+            this.FamiliyaBox.Visible = false;
             // 
             // CardNumberNumeric
             // 
             this.CardNumberNumeric.Location = new System.Drawing.Point(98, 7);
+            this.CardNumberNumeric.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.CardNumberNumeric.Minimum = new decimal(new int[] {
             1,
             0,
@@ -120,6 +129,7 @@
             0,
             0,
             0});
+            this.CardNumberNumeric.Visible = false;
             // 
             // CostOfWork
             // 
@@ -142,6 +152,7 @@
             0,
             0,
             0});
+            this.CostOfWork.Visible = false;
             // 
             // AddButton
             // 
@@ -151,6 +162,7 @@
             this.AddButton.TabIndex = 7;
             this.AddButton.Text = "Добавить пациента";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Visible = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // SearchNameButt
@@ -161,6 +173,7 @@
             this.SearchNameButt.TabIndex = 9;
             this.SearchNameButt.Text = "Найти";
             this.SearchNameButt.UseVisualStyleBackColor = true;
+            this.SearchNameButt.Visible = false;
             this.SearchNameButt.Click += new System.EventHandler(this.SearchNameButt_Click);
             // 
             // label1
@@ -171,6 +184,7 @@
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Фамилия";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -180,6 +194,7 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Номер карточки";
+            this.label2.Visible = false;
             // 
             // label3
             // 
@@ -189,6 +204,7 @@
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "Вид работы";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -198,6 +214,7 @@
             this.label4.Size = new System.Drawing.Size(65, 26);
             this.label4.TabIndex = 13;
             this.label4.Text = "Стоимость \r\nработы";
+            this.label4.Visible = false;
             // 
             // SearchNameTextBox
             // 
@@ -205,6 +222,7 @@
             this.SearchNameTextBox.Name = "SearchNameTextBox";
             this.SearchNameTextBox.Size = new System.Drawing.Size(93, 20);
             this.SearchNameTextBox.TabIndex = 8;
+            this.SearchNameTextBox.Visible = false;
             // 
             // label5
             // 
@@ -214,6 +232,7 @@
             this.label5.Size = new System.Drawing.Size(148, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Справка о клиенте по ФИО";
+            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -223,6 +242,7 @@
             this.label6.Size = new System.Drawing.Size(184, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Справка о клиенте по виду работы";
+            this.label6.Visible = false;
             // 
             // SearchTypeButt
             // 
@@ -232,6 +252,7 @@
             this.SearchTypeButt.TabIndex = 11;
             this.SearchTypeButt.Text = "Найти";
             this.SearchTypeButt.UseVisualStyleBackColor = true;
+            this.SearchTypeButt.Visible = false;
             this.SearchTypeButt.Click += new System.EventHandler(this.SearchTypeButt_Click);
             // 
             // SearchDolgButt
@@ -242,6 +263,7 @@
             this.SearchDolgButt.TabIndex = 12;
             this.SearchDolgButt.Text = "Найти должников";
             this.SearchDolgButt.UseVisualStyleBackColor = true;
+            this.SearchDolgButt.Visible = false;
             this.SearchDolgButt.Click += new System.EventHandler(this.SearchDolgButt_Click);
             // 
             // label7
@@ -252,6 +274,7 @@
             this.label7.Size = new System.Drawing.Size(143, 13);
             this.label7.TabIndex = 20;
             this.label7.Text = "Справка о всех должниках";
+            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -261,6 +284,7 @@
             this.label8.Size = new System.Drawing.Size(235, 13);
             this.label8.TabIndex = 21;
             this.label8.Text = "Удалить всех пациентов без задолженности";
+            this.label8.Visible = false;
             // 
             // DeleteDolgButt
             // 
@@ -270,6 +294,7 @@
             this.DeleteDolgButt.TabIndex = 13;
             this.DeleteDolgButt.Text = "Удалить";
             this.DeleteDolgButt.UseVisualStyleBackColor = true;
+            this.DeleteDolgButt.Visible = false;
             this.DeleteDolgButt.Click += new System.EventHandler(this.DeleteDolgButt_Click);
             // 
             // PassButton
@@ -285,7 +310,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 346);
+            this.label9.Location = new System.Drawing.Point(3, 348);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(286, 13);
             this.label9.TabIndex = 25;
@@ -295,9 +320,9 @@
             // 
             this.PassTextBox.Location = new System.Drawing.Point(7, 364);
             this.PassTextBox.Name = "PassTextBox";
+            this.PassTextBox.PasswordChar = '☺';
             this.PassTextBox.Size = new System.Drawing.Size(183, 20);
             this.PassTextBox.TabIndex = 14;
-            this.PassTextBox.Text = "Введите пароль";
             // 
             // Consol
             // 
@@ -315,6 +340,7 @@
             this.TypeOfWorkBox.Name = "TypeOfWorkBox";
             this.TypeOfWorkBox.Size = new System.Drawing.Size(93, 20);
             this.TypeOfWorkBox.TabIndex = 4;
+            this.TypeOfWorkBox.Visible = false;
             // 
             // SearchTypeBox
             // 
@@ -322,6 +348,7 @@
             this.SearchTypeBox.Name = "SearchTypeBox";
             this.SearchTypeBox.Size = new System.Drawing.Size(106, 20);
             this.SearchTypeBox.TabIndex = 10;
+            this.SearchTypeBox.Visible = false;
             // 
             // label10
             // 
@@ -331,6 +358,7 @@
             this.label10.Size = new System.Drawing.Size(103, 26);
             this.label10.TabIndex = 30;
             this.label10.Text = "Пациент заплатил \r\n(0 - нет, 1 - да)";
+            this.label10.Visible = false;
             // 
             // PaymentNumerical
             // 
@@ -343,6 +371,7 @@
             this.PaymentNumerical.Name = "PaymentNumerical";
             this.PaymentNumerical.Size = new System.Drawing.Size(73, 20);
             this.PaymentNumerical.TabIndex = 6;
+            this.PaymentNumerical.Visible = false;
             // 
             // label11
             // 
@@ -352,6 +381,7 @@
             this.label11.Size = new System.Drawing.Size(117, 13);
             this.label11.TabIndex = 33;
             this.label11.Text = "Инициалы полностью";
+            this.label11.Visible = false;
             // 
             // NameAndOtchestvo
             // 
@@ -359,10 +389,11 @@
             this.NameAndOtchestvo.Name = "NameAndOtchestvo";
             this.NameAndOtchestvo.Size = new System.Drawing.Size(60, 20);
             this.NameAndOtchestvo.TabIndex = 3;
+            this.NameAndOtchestvo.Visible = false;
             // 
             // ConsoleClear
             // 
-            this.ConsoleClear.Location = new System.Drawing.Point(196, 390);
+            this.ConsoleClear.Location = new System.Drawing.Point(7, 390);
             this.ConsoleClear.Name = "ConsoleClear";
             this.ConsoleClear.Size = new System.Drawing.Size(109, 58);
             this.ConsoleClear.TabIndex = 16;
@@ -370,17 +401,35 @@
             this.ConsoleClear.UseVisualStyleBackColor = true;
             this.ConsoleClear.Click += new System.EventHandler(this.ConsoleClear_Click);
             // 
+            // ImportButt
+            // 
+            this.ImportButt.Location = new System.Drawing.Point(129, 405);
+            this.ImportButt.Name = "ImportButt";
+            this.ImportButt.Size = new System.Drawing.Size(81, 42);
+            this.ImportButt.TabIndex = 34;
+            this.ImportButt.Text = "Импорт из файла";
+            this.ImportButt.UseVisualStyleBackColor = true;
+            this.ImportButt.Visible = false;
+            // 
+            // ExportButt
+            // 
+            this.ExportButt.Location = new System.Drawing.Point(216, 405);
+            this.ExportButt.Name = "ExportButt";
+            this.ExportButt.Size = new System.Drawing.Size(89, 42);
+            this.ExportButt.TabIndex = 35;
+            this.ExportButt.Text = "Экспорт в файл";
+            this.ExportButt.UseVisualStyleBackColor = true;
+            this.ExportButt.Visible = false;
+            this.ExportButt.Click += new System.EventHandler(this.ExportButt_Click);
+            // 
             // ColumnCardNum
             // 
-            this.ColumnCardNum.Frozen = true;
             this.ColumnCardNum.HeaderText = "№ карточки";
             this.ColumnCardNum.Name = "ColumnCardNum";
             this.ColumnCardNum.ReadOnly = true;
-            this.ColumnCardNum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ColumnNSS
             // 
-            this.ColumnNSS.Frozen = true;
             this.ColumnNSS.HeaderText = "ФИО пациента";
             this.ColumnNSS.Name = "ColumnNSS";
             this.ColumnNSS.ReadOnly = true;
@@ -388,21 +437,18 @@
             // 
             // ColumnVidRaboti
             // 
-            this.ColumnVidRaboti.Frozen = true;
             this.ColumnVidRaboti.HeaderText = "Вид работы";
             this.ColumnVidRaboti.Name = "ColumnVidRaboti";
             this.ColumnVidRaboti.ReadOnly = true;
             // 
             // ColumnCost
             // 
-            this.ColumnCost.Frozen = true;
             this.ColumnCost.HeaderText = "Стоимость выполненной работы";
             this.ColumnCost.Name = "ColumnCost";
             this.ColumnCost.ReadOnly = true;
             // 
             // ColumnOplataCheck
             // 
-            this.ColumnOplataCheck.Frozen = true;
             this.ColumnOplataCheck.HeaderText = "Отметка об оплате";
             this.ColumnOplataCheck.Name = "ColumnOplataCheck";
             this.ColumnOplataCheck.ReadOnly = true;
@@ -411,7 +457,6 @@
             // 
             // ColumnDolg
             // 
-            this.ColumnDolg.Frozen = true;
             this.ColumnDolg.HeaderText = "Сумма задолженности";
             this.ColumnDolg.Name = "ColumnDolg";
             this.ColumnDolg.ReadOnly = true;
@@ -430,6 +475,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 460);
+            this.Controls.Add(this.ExportButt);
+            this.Controls.Add(this.ImportButt);
             this.Controls.Add(this.ConsoleClear);
             this.Controls.Add(this.NameAndOtchestvo);
             this.Controls.Add(this.label11);
@@ -461,7 +508,8 @@
             this.Controls.Add(this.Tablitca);
             this.HelpButton = true;
             this.Name = "Form1";
-            this.Text = "База пациентов зубного врача";
+            this.Text = "Информационная база пациентов зубного врача";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tablitca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardNumberNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostOfWork)).EndInit();
@@ -501,6 +549,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox NameAndOtchestvo;
         private System.Windows.Forms.Button ConsoleClear;
+        private System.Windows.Forms.Button ImportButt;
+        private System.Windows.Forms.Button ExportButt;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCardNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNSS;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnVidRaboti;

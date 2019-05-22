@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,53 +14,38 @@ namespace Kursovaya
     public partial class Form1 : Form
     {
         const int BaseCount = 20;                         //максимальное значение списка
+
         List<Stomat> Base = new List<Stomat>(BaseCount); // Создание списка
+
+        private static string path = Environment.CurrentDirectory + "/StomatBase.kurs"; //указываю путь сохранения (будет сохраняться в той папке, где находится приложение
 
         public Form1()
         {
 
             InitializeComponent();
+            //искусственно забиваю таблицу
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
 
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
             RefreshGrid();
-
-            ToolTip Spravka = new ToolTip(); //Подсказки на кнопки
-            Spravka.SetToolTip(AddButton, "Кнопка добавляет информацию о пациенте в базу.");
-            Spravka.SetToolTip(SearchNameButt, "Кнопка находит пациента и выдаёт о нём справку, по его ФИО.");
-            Spravka.SetToolTip(SearchTypeButt, "Кнопка находит пациента и выдаёт о нём справку, по процедуре, которую он заказывал.");
-            Spravka.SetToolTip(SearchDolgButt, "Кнопка находит пациентов, которые не оплатили процедуру, и выдаёт о них справку.");
-            Spravka.SetToolTip(DeleteDolgButt, "Кнопка удаляет информацию про пациентов без задолженности.");
-            Spravka.SetToolTip(PassButton, "Кнопка на предоставления прав редактирования таблицы, пользователь должен знать пароль, чтобы получить данные права.");
-            //Подсказки на остальное (текст боксы и тп.)
-            Spravka.SetToolTip(CardNumberNumeric, "Поле для ввода номера карточки пациента в базе.");
-            Spravka.SetToolTip(FamiliyaBox, "Поле для ввода ФИО пациента.");
-            Spravka.SetToolTip(TypeOfWorkBox, "Поле для ввода вида процедуры, которую назначил стоматолог.");
-            Spravka.SetToolTip(CostOfWork, "Стоимость выполненной процедуры.");
-            Spravka.SetToolTip(PaymentNumerical, "Оплатил ли пациент процедуру. Да, если оплатил. Нет, если не оплатил.");
-            Spravka.SetToolTip(SearchNameTextBox, "Поле для поиска пациента по ФИО.");
-            Spravka.SetToolTip(SearchTypeBox, "Поле для поиска пациентов по виду процедуры.");
-            Spravka.SetToolTip(PassTextBox, "Поле для получения прав на разрешение редактирования таблицы, для этого введите пароль.");
-            Spravka.SetToolTip(Consol, "Консоль данной базы данных, ошибки и успешные действия будут выводиться тут.");
-            Spravka.SetToolTip(Tablitca, "База данных о пациентах стоматолога, тут находятся основные сведения про пациентов.");
         }
 
         private void RefreshGrid() //обновление таблицы
@@ -69,7 +55,7 @@ namespace Kursovaya
             {
                 Tablitca.Rows.Add
                 (
-                    element.CardNumber,
+                    element.CardNumber,         //присвоение элементов в таблицу
                     element.getFullName(),
                     element.TypeOfWork,
                     element.WorkCost,
@@ -79,33 +65,34 @@ namespace Kursovaya
             }
         }
 
-        private void AddButton_Click(object sender, EventArgs e) //проверка на заполненность полей
+        private void AddButton_Click(object sender, EventArgs e) //проверка на заполненность полей + добавление, если прошли все проверки успешно
         {
             foreach (var element in Base)
             {
-                if (CardNumberNumeric.Value == element.CardNumber)
+                if (CardNumberNumeric.Value == element.CardNumber) //сравниваю номер, который хочет добавить пользователь с имеющимися
                 {
+                    Consol.Clear();
                     Consol.AppendText("Такой номер карты уже есть!\r\n");
                     return;
                 }
             } 
-            
             RefreshGrid();
-            if (FamiliyaBox.Text.Length == 0 || !Slovo((String)FamiliyaBox.Text))
+
+            if (FamiliyaBox.Text.Length == 0 || !Slovo((String)FamiliyaBox.Text)) //проверка поля "фамилия"
             {
                 Consol.AppendText("Проверьте правильность написания фамилии!\r\n");
             }
-            else if (TypeOfWorkBox.Text.Length == 0 || !Slovo((String)TypeOfWorkBox.Text))
+            else if (TypeOfWorkBox.Text.Length == 0 || !Slovo((String)TypeOfWorkBox.Text)) //проверка поля "вид услуги"
             {
                 Consol.AppendText("Проверьте, выбрали ли вы услугу!\r\n");
             }
-            else if (NameAndOtchestvo.Text.Length == 0 || !Slovo((String)NameAndOtchestvo.Text))
+            else if (NameAndOtchestvo.Text.Length == 0 || !Slovo((String)NameAndOtchestvo.Text)) //проверка поля "инициалы"
             {
                 Consol.AppendText("Проверьте правильность написания инициалов!\r\n");
             }
             else
             {
-                Base.Add(new Stomat((int)CardNumberNumeric.Value, FamiliyaBox.Text, NameAndOtchestvo.Text, TypeOfWorkBox.Text, (int)CostOfWork.Value, (int)PaymentNumerical.Value));
+                Base.Add(new Stomat((int)CardNumberNumeric.Value, FamiliyaBox.Text, NameAndOtchestvo.Text, TypeOfWorkBox.Text, (int)CostOfWork.Value, (int)PaymentNumerical.Value)); //запись
                 Consol.Clear();
                 Consol.AppendText("Данные успешно сохранены в таблице!\r\n");
             }
@@ -116,7 +103,7 @@ namespace Kursovaya
         {
             foreach (char s in mas)
             {
-                if (!char.IsLetter(s) && s != ' ' && s != '-') return false;
+                if (!char.IsLetter(s) && s != ' ' && s != '-') return false; 
             }
             return true;
         }
@@ -124,10 +111,10 @@ namespace Kursovaya
         private void Tablitca_CellContentClick(object sender, DataGridViewCellEventArgs e) //удаление пациентов
         {
             if (e.RowIndex >= 0)
-            {
+            {                            //"иду" к 6 столику (6-й он, если считать с 0)
                 if (e.ColumnIndex == 6)
                 {
-                    if (MessageBox.Show("Стереть данные?", "Карточка №" + (e.RowIndex + 1), MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Стереть данные?", "Карточка №" + (e.RowIndex + 1), MessageBoxButtons.YesNo) == DialogResult.Yes) // вызов диалогового окна
                     {
                         Base.Remove(Base.ElementAt(e.RowIndex));
                         RefreshGrid();
@@ -140,10 +127,11 @@ namespace Kursovaya
 
         private void SearchDolgButt_Click(object sender, EventArgs e) //поиск должников
         {
+            Consol.Clear();
             int counter = 0;
             for (int i = 0; i < BaseCount; i++)
             {
-                if (Base[i].Payment == 0)
+                if (Base[i].Payment == 0) // выдача информации про должников
                 {
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
                     Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
@@ -156,19 +144,43 @@ namespace Kursovaya
             if (counter == 0) Consol.AppendText("Поиск не дал результатов.\r\n");
         }
 
-        string Parol = "admin";                                    // задаю пароль
-        private void PassButton_Click(object sender, EventArgs e) //пароль и все дела
-        {
-            if (PassTextBox.Text == Parol)
+        string Password = "admin";                                           // задаю пароль
+
+        private void PassButton_Click(object sender, EventArgs e)          //проверка пароля, при правильном пароле все элементы 
+        {                                                                 //становятся видимыми
+            if (PassTextBox.Text == Password)
             {
                 Consol.Clear();
-                Consol.AppendText("Чего желает мой повелитель?");
-                Tablitca.AllowUserToDeleteRows = true;
-                Tablitca.AllowUserToAddRows = true;
-                Tablitca.AllowUserToResizeRows = true;
-                Tablitca.AllowUserToResizeColumns = true;
-                Tablitca.AllowUserToOrderColumns = true;
-                Tablitca.ReadOnly = false;
+                Consol.AppendText("Теперь вам доступно редактирование базы.\r\n");
+                Tablitca.Visible = true;
+                AddButton.Visible = true;
+                SearchNameButt.Visible = true;
+                SearchTypeButt.Visible = true;
+                SearchDolgButt.Visible = true;
+                DeleteDolgButt.Visible = true;
+                CardNumberNumeric.Visible = true;
+                FamiliyaBox.Visible = true;
+                NameAndOtchestvo.Visible = true;
+                TypeOfWorkBox.Visible = true;
+                CostOfWork.Visible = true;
+                PaymentNumerical.Visible = true;
+                SearchNameTextBox.Visible = true;
+                SearchTypeBox.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                label8.Visible = true;
+                label9.Visible = false;
+                label10.Visible = true;
+                label11.Visible = true;
+                PassTextBox.Visible = false;
+                PassButton.Visible = false;
+                ImportButt.Visible = true;
+                ExportButt.Visible = true;
             }
             else
             {
@@ -180,28 +192,31 @@ namespace Kursovaya
         private void SearchNameButt_Click(object sender, EventArgs e) //поиск по фамилии
         {
             Consol.Clear();
-                if (!Slovo(SearchNameTextBox.Text))
+            if (!Slovo(SearchNameTextBox.Text))
+            {
+                Consol.AppendText("Проверьте правильность написания фамилии!\r\n");
+                return;
+            }
+            Consol.AppendText("Поиск по фамилии:\r\n");
+            int counter = 0;
+            for (int i = 0; i < BaseCount; i++)
+            {
+                if (Base[i].getFamiliya().Equals(SearchNameTextBox.Text)) //выдача результатов при совпадении
                 {
-                    Consol.AppendText("Проверьте правильность написания фамилии!\r\n");
-                    return;
+
+                    Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
+                    Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
+                    Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
+                    Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
+                    Consol.AppendText("Оплата: " + Base[i].Perevod() + "\r\n");
+                    Consol.AppendText("Должен врачу: " + Base[i].EstDolg() + "\r\n");
+                    counter++;
                 }
-                    Consol.AppendText("Поиск по фамилии:\r\n");
-                int counter = 0;
-                for (int i = 0; i < BaseCount; i++)
-                {
-                    if (Base[i].getFamiliya().Equals(SearchNameTextBox.Text))
-                    {
-                        
-                        Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
-                        Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
-                        Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
-                        Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
-                        Consol.AppendText("Оплата: " + Base[i].Perevod() + "\r\n");
-                        Consol.AppendText("Должен врачу: " + Base[i].EstDolg() + "\r\n");
-                        counter++;
-                    }
-                }
-                if (counter == 0) Consol.AppendText("Поиск не дал результатов.\r\n");
+            }
+            if (counter == 0)
+            {
+                Consol.AppendText("Поиск не дал результатов.\r\n"); 
+            }
         }
 
         private void ConsoleClear_Click(object sender, EventArgs e) //очистка консоли
@@ -211,7 +226,24 @@ namespace Kursovaya
 
         private void DeleteDolgButt_Click(object sender, EventArgs e) //удалить всех без задолженности
         {
-            
+            Consol.Clear();
+            int counter = 0;
+            for (int i = 0; i < Base.Count; i++)
+            {
+                if (Base[i].Payment == 1) //если есть совпадения, будет удалять оплативших
+                {
+                    Base.Remove(Base[i]);
+                    RefreshGrid();
+                    counter++;
+                }
+            }
+            Consol.AppendText("Удалены все пациенты без задолженности\r\n");
+
+            if (counter == 0)
+            {
+                Consol.Clear();
+                Consol.AppendText("Поиск не дал результатов.\r\n");
+            }
         }
 
         private void SearchTypeButt_Click(object sender, EventArgs e) //поиск по виду работы
@@ -226,7 +258,7 @@ namespace Kursovaya
             int counter = 0;
             for (int i = 0; i < BaseCount; i++)
             {
-                if (Base[i].TypeOfWork.Equals(SearchTypeBox.Text))
+                if (Base[i].TypeOfWork.Equals(SearchTypeBox.Text)) //информация по найденным пациентам
                 {
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
                     Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
@@ -239,6 +271,51 @@ namespace Kursovaya
             }
 
             if (counter == 0) Consol.AppendText("Поиск не дал результатов.\r\n");
+        }
+
+        private void Form1_Load(object sender, EventArgs e) //при загрузке формы все это заработает
+        {
+            ToolTip Spravka = new ToolTip(); //Подсказки на кнопки
+            Spravka.SetToolTip(ConsoleClear, "Очистка консоли.");
+            Spravka.SetToolTip(AddButton, "Кнопка добавляет информацию о пациенте в базу.");
+            Spravka.SetToolTip(SearchNameButt, "Кнопка находит пациента и выдаёт о нём справку, по его ФИО.");
+            Spravka.SetToolTip(SearchTypeButt, "Кнопка находит пациента и выдаёт о нём справку, по процедуре, которую он заказывал.");
+            Spravka.SetToolTip(SearchDolgButt, "Кнопка находит пациентов, которые не оплатили процедуру, и выдаёт о них справку.");
+            Spravka.SetToolTip(DeleteDolgButt, "Кнопка удаляет информацию про пациентов без задолженности.");
+            Spravka.SetToolTip(PassButton, "Кнопка на предоставления прав редактирования таблицы, пользователь должен знать пароль, чтобы получить данные права.");
+            //Подсказки на остальное (текст боксы и тп.)
+            Spravka.SetToolTip(CardNumberNumeric, "Поле для ввода номера карточки пациента в базе.");
+            Spravka.SetToolTip(FamiliyaBox, "Поле для ввода фамилии пациента.");
+            Spravka.SetToolTip(NameAndOtchestvo, "Поле для ввода имени и отчества.");
+            Spravka.SetToolTip(TypeOfWorkBox, "Поле для ввода вида процедуры, которую назначил стоматолог.");
+            Spravka.SetToolTip(CostOfWork, "Стоимость выполненной процедуры.");
+            Spravka.SetToolTip(PaymentNumerical, "Оплатил ли пациент процедуру. Да, если оплатил. Нет, если не оплатил.");
+            Spravka.SetToolTip(SearchNameTextBox, "Поле для поиска пациента по ФИО.");
+            Spravka.SetToolTip(SearchTypeBox, "Поле для поиска пациентов по виду процедуры.");
+            Spravka.SetToolTip(PassTextBox, "Поле для получения прав на разрешение редактирования таблицы, для этого введите пароль.");
+            Spravka.SetToolTip(Consol, "Консоль данной базы данных, ошибки и успешные действия будут выводиться тут.");
+            Spravka.SetToolTip(Tablitca, "База данных о пациентах стоматолога, тут находятся основные сведения про пациентов.");
+
+            Consol.AppendText("Приветствую вас, пользователь, в информационной базе данных стоматолога, для начала работы введите пароль!\r\n");
+        }
+
+        public void Export() //медот экспорта списка, экспортирует в ту же папку, где находится приложение
+        {
+            FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write);
+            BinaryWriter writer = new BinaryWriter(fileStream);
+
+            for (int i = 0; i < BaseCount; i++)
+            {
+                Base[i].writeToFile(writer);
+            }
+
+            writer.Close();
+            fileStream.Close();
+        }
+
+        private void ExportButt_Click(object sender, EventArgs e) //кнопка экспорта списка
+        {
+            Export();
         }
     }
 }

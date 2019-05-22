@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,13 @@ namespace Kursovaya
     {
         public int CardNumber;
         public int WorkCost;
-        public string Familiya;
+        public string Familiya;     //объявляю переменные
         public string Inichialy;
         public string FullName;
         public string TypeOfWork;
         public int Payment;
 
-        public Stomat(int CardNumber, string Familiya,string Inichialy, string TypeOfWork, int WorkCost, int Payment)
+        public Stomat(int CardNumber, string Familiya,string Inichialy, string TypeOfWork, int WorkCost, int Payment) //конструктор класса
         {
             this.CardNumber = CardNumber;
             this.Familiya = Familiya;
@@ -26,18 +27,18 @@ namespace Kursovaya
             this.Payment = Payment;
         }
 
-        public string getFullName() //произвожу склейку фамилии и инициалов
+        public String getFullName() //произвожу склейку фамилии и инициалов
         {
             string FullName = Familiya + " " + Inichialy;
             return FullName;
         }
 
-        public string getFamiliya() //возвращаю только фамилию для поиска в дальнейшем
+        public String getFamiliya() //возвращаю только фамилию для поиска в дальнейшем
         {
             return Familiya;
         }
 
-        public String Zamena () //ставит + или же пробел в столбе об отметке оплаты
+        public String Zamena () //ставит + или же - в столбе об отметке оплаты
         {
             return this.Payment == 1 ? "+" : "-";
         }
@@ -47,14 +48,19 @@ namespace Kursovaya
             return this.Payment == 1 ? "0": WorkCost.ToString();
         }
 
-        public string Perevod()
+        public String Perevod() //метод,необходимый для выдачи данных в консоль
         {
             return this.Payment == 1 ? WorkCost.ToString() : "0";
         }
 
-        public String Peredacha()
+        public void writeToFile(BinaryWriter output) //экспорт из файла
         {
-            return (CardNumber == -1 )? "" : CardNumber.ToString();
+            output.Write(this.CardNumber);
+            output.Write(this.getFullName());
+            output.Write(this.TypeOfWork);
+            output.Write(this.WorkCost);
+            output.Write(this.Zamena());
+            output.Write(this.EstDolg());
         }
     }
 }
