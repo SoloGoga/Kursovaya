@@ -111,7 +111,7 @@ namespace Kursovaya
         private void Tablitca_CellContentClick(object sender, DataGridViewCellEventArgs e) //удаление пациентов
         {
             if (e.RowIndex >= 0)
-            {                            //"иду" к 6 столику (6-й он, если считать с 0)
+            {                            //"иду" к 6 столбику (6-й он, если считать с 0)
                 if (e.ColumnIndex == 6)
                 {
                     if (MessageBox.Show("Стереть данные?", "Карточка №" + (e.RowIndex + 1), MessageBoxButtons.YesNo) == DialogResult.Yes) // вызов диалогового окна
@@ -134,7 +134,7 @@ namespace Kursovaya
                 if (Base[i].Payment == 0) // выдача информации про должников
                 {
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
-                    Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
+                    Consol.AppendText("Ф.И.О. пациента: " + Base[i].getFullName() + "\t");
                     Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
                     Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
                     Consol.AppendText("Задолженность: " + Base[i].WorkCost + "\r\n");
@@ -151,7 +151,7 @@ namespace Kursovaya
             if (PassTextBox.Text == Password)
             {
                 Consol.Clear();
-                Consol.AppendText("Теперь вам доступно редактирование базы.\r\n");
+                Consol.AppendText("Теперь вам доступно редактирование базы, приятной работы.\r\n");
                 Tablitca.Visible = true;
                 AddButton.Visible = true;
                 SearchNameButt.Visible = true;
@@ -205,7 +205,7 @@ namespace Kursovaya
                 {
 
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
-                    Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
+                    Consol.AppendText("Ф.И.О. пациента: " + Base[i].getFullName() + "\t");
                     Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
                     Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
                     Consol.AppendText("Оплата: " + Base[i].Perevod() + "\r\n");
@@ -261,7 +261,7 @@ namespace Kursovaya
                 if (Base[i].TypeOfWork.Equals(SearchTypeBox.Text)) //информация по найденным пациентам
                 {
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
-                    Consol.AppendText("Ф.И.О. клиента: " + Base[i].getFullName() + "\t");
+                    Consol.AppendText("Ф.И.О. пациента: " + Base[i].getFullName() + "\t");
                     Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
                     Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
                     Consol.AppendText("Оплата: " + Base[i].Perevod() + "\r\n");
@@ -277,12 +277,14 @@ namespace Kursovaya
         {
             ToolTip Spravka = new ToolTip(); //Подсказки на кнопки
             Spravka.SetToolTip(ConsoleClear, "Очистка консоли.");
-            Spravka.SetToolTip(AddButton, "Кнопка добавляет информацию о пациенте в базу.");
-            Spravka.SetToolTip(SearchNameButt, "Кнопка находит пациента и выдаёт о нём справку, по его ФИО.");
+            Spravka.SetToolTip(AddButton, "Кнопка добавляет информацию о пациенте в информационную базу.");
+            Spravka.SetToolTip(SearchNameButt, "Кнопка находит пациента и выдаёт о нём справку, по его фамилии.");
             Spravka.SetToolTip(SearchTypeButt, "Кнопка находит пациента и выдаёт о нём справку, по процедуре, которую он заказывал.");
             Spravka.SetToolTip(SearchDolgButt, "Кнопка находит пациентов, которые не оплатили процедуру, и выдаёт о них справку.");
             Spravka.SetToolTip(DeleteDolgButt, "Кнопка удаляет информацию про пациентов без задолженности.");
             Spravka.SetToolTip(PassButton, "Кнопка на предоставления прав редактирования таблицы, пользователь должен знать пароль, чтобы получить данные права.");
+            Spravka.SetToolTip(ImportButt, "Кнопка импорта из файла информации в базу.");
+            Spravka.SetToolTip(ExportButt, "Кнопка экспорта базы данных.");
             //Подсказки на остальное (текст боксы и тп.)
             Spravka.SetToolTip(CardNumberNumeric, "Поле для ввода номера карточки пациента в базе.");
             Spravka.SetToolTip(FamiliyaBox, "Поле для ввода фамилии пациента.");
@@ -290,13 +292,15 @@ namespace Kursovaya
             Spravka.SetToolTip(TypeOfWorkBox, "Поле для ввода вида процедуры, которую назначил стоматолог.");
             Spravka.SetToolTip(CostOfWork, "Стоимость выполненной процедуры.");
             Spravka.SetToolTip(PaymentNumerical, "Оплатил ли пациент процедуру. Да, если оплатил. Нет, если не оплатил.");
-            Spravka.SetToolTip(SearchNameTextBox, "Поле для поиска пациента по ФИО.");
+            Spravka.SetToolTip(SearchNameTextBox, "Поле для поиска пациента по Фамилии.");
             Spravka.SetToolTip(SearchTypeBox, "Поле для поиска пациентов по виду процедуры.");
             Spravka.SetToolTip(PassTextBox, "Поле для получения прав на разрешение редактирования таблицы, для этого введите пароль.");
             Spravka.SetToolTip(Consol, "Консоль данной базы данных, ошибки и успешные действия будут выводиться тут.");
             Spravka.SetToolTip(Tablitca, "База данных о пациентах стоматолога, тут находятся основные сведения про пациентов.");
 
-            Consol.AppendText("Приветствую вас, пользователь, в информационной базе данных стоматолога, для начала работы введите пароль!\r\n");
+
+
+            Consol.AppendText("Приветствую вас, Пользователь, вы находитесь в информационной базе данных стоматолога, для начала работы введите пароль!\r\n");
         }
 
         public void Export() //медот экспорта списка, экспортирует в ту же папку, где находится приложение

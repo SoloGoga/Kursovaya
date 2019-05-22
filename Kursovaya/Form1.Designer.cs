@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.Tablitca = new System.Windows.Forms.DataGridView();
+            this.ColumnCardNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVidRaboti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOplataCheck = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDolg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.FamiliyaBox = new System.Windows.Forms.TextBox();
             this.CardNumberNumeric = new System.Windows.Forms.NumericUpDown();
             this.CostOfWork = new System.Windows.Forms.NumericUpDown();
@@ -59,13 +66,6 @@
             this.ConsoleClear = new System.Windows.Forms.Button();
             this.ImportButt = new System.Windows.Forms.Button();
             this.ExportButt = new System.Windows.Forms.Button();
-            this.ColumnCardNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnVidRaboti = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnOplataCheck = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDolg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Tablitca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CardNumberNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostOfWork)).BeginInit();
@@ -99,6 +99,54 @@
             this.Tablitca.TabIndex = 0;
             this.Tablitca.Visible = false;
             this.Tablitca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Tablitca_CellContentClick);
+            // 
+            // ColumnCardNum
+            // 
+            this.ColumnCardNum.HeaderText = "№ карточки";
+            this.ColumnCardNum.Name = "ColumnCardNum";
+            this.ColumnCardNum.ReadOnly = true;
+            // 
+            // ColumnNSS
+            // 
+            this.ColumnNSS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColumnNSS.HeaderText = "ФИО пациента";
+            this.ColumnNSS.Name = "ColumnNSS";
+            this.ColumnNSS.ReadOnly = true;
+            // 
+            // ColumnVidRaboti
+            // 
+            this.ColumnVidRaboti.HeaderText = "Вид работы";
+            this.ColumnVidRaboti.Name = "ColumnVidRaboti";
+            this.ColumnVidRaboti.ReadOnly = true;
+            // 
+            // ColumnCost
+            // 
+            this.ColumnCost.HeaderText = "Стоимость выполненной работы";
+            this.ColumnCost.Name = "ColumnCost";
+            this.ColumnCost.ReadOnly = true;
+            // 
+            // ColumnOplataCheck
+            // 
+            this.ColumnOplataCheck.HeaderText = "Отметка об оплате";
+            this.ColumnOplataCheck.Name = "ColumnOplataCheck";
+            this.ColumnOplataCheck.ReadOnly = true;
+            this.ColumnOplataCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnOplataCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumnDolg
+            // 
+            this.ColumnDolg.HeaderText = "Сумма задолженности";
+            this.ColumnDolg.Name = "ColumnDolg";
+            this.ColumnDolg.ReadOnly = true;
+            // 
+            // ColumnDelete
+            // 
+            this.ColumnDelete.HeaderText = "Удаление пациента";
+            this.ColumnDelete.Name = "ColumnDelete";
+            this.ColumnDelete.ReadOnly = true;
+            this.ColumnDelete.Text = "X";
+            this.ColumnDelete.UseColumnTextForButtonValue = true;
+            this.ColumnDelete.Width = 70;
             // 
             // FamiliyaBox
             // 
@@ -229,9 +277,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 291);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 13);
+            this.label5.Size = new System.Drawing.Size(170, 13);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Справка о клиенте по ФИО";
+            this.label5.Text = "Справка о клиенте по Фамилии";
             this.label5.Visible = false;
             // 
             // label6
@@ -421,54 +469,6 @@
             this.ExportButt.UseVisualStyleBackColor = true;
             this.ExportButt.Visible = false;
             this.ExportButt.Click += new System.EventHandler(this.ExportButt_Click);
-            // 
-            // ColumnCardNum
-            // 
-            this.ColumnCardNum.HeaderText = "№ карточки";
-            this.ColumnCardNum.Name = "ColumnCardNum";
-            this.ColumnCardNum.ReadOnly = true;
-            // 
-            // ColumnNSS
-            // 
-            this.ColumnNSS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColumnNSS.HeaderText = "ФИО пациента";
-            this.ColumnNSS.Name = "ColumnNSS";
-            this.ColumnNSS.ReadOnly = true;
-            // 
-            // ColumnVidRaboti
-            // 
-            this.ColumnVidRaboti.HeaderText = "Вид работы";
-            this.ColumnVidRaboti.Name = "ColumnVidRaboti";
-            this.ColumnVidRaboti.ReadOnly = true;
-            // 
-            // ColumnCost
-            // 
-            this.ColumnCost.HeaderText = "Стоимость выполненной работы";
-            this.ColumnCost.Name = "ColumnCost";
-            this.ColumnCost.ReadOnly = true;
-            // 
-            // ColumnOplataCheck
-            // 
-            this.ColumnOplataCheck.HeaderText = "Отметка об оплате";
-            this.ColumnOplataCheck.Name = "ColumnOplataCheck";
-            this.ColumnOplataCheck.ReadOnly = true;
-            this.ColumnOplataCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColumnOplataCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColumnDolg
-            // 
-            this.ColumnDolg.HeaderText = "Сумма задолженности";
-            this.ColumnDolg.Name = "ColumnDolg";
-            this.ColumnDolg.ReadOnly = true;
-            // 
-            // ColumnDelete
-            // 
-            this.ColumnDelete.HeaderText = "Удаление пациента";
-            this.ColumnDelete.Name = "ColumnDelete";
-            this.ColumnDelete.ReadOnly = true;
-            this.ColumnDelete.Text = "X";
-            this.ColumnDelete.UseColumnTextForButtonValue = true;
-            this.ColumnDelete.Width = 70;
             // 
             // Form1
             // 
