@@ -430,10 +430,10 @@
             // 
             // ColumnNSS
             // 
+            this.ColumnNSS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnNSS.HeaderText = "ФИО пациента";
             this.ColumnNSS.Name = "ColumnNSS";
             this.ColumnNSS.ReadOnly = true;
-            this.ColumnNSS.Width = 150;
             // 
             // ColumnVidRaboti
             // 

@@ -24,26 +24,26 @@ namespace Kursovaya
 
             InitializeComponent();
             //искусственно забиваю таблицу
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Егор Ильич", "Удаление зуба", 1000, 0));
-            Base.Add(new Stomat(Base.Count + 1, "Фотеско", "Артем Федорович", "Курсач делает", 100, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Дудин", "Гога Афанасьевич", "Удаление зуба", 1400, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Коваленко", "Владимир Федотович", "Пломба", 320, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Кудрин", "Мстислав Юрьевич", "Удаление нерва", 2700, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Жан", "Пьер Крузо", "Пломба", 5100, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фотескур", "Артем Игоревич", "Осмотр", 150, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Варвар", "Руслан Сергеевич", "Протезирование", 3700, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Костюшкин", "Игорь Павлович", "Удаление зуба", 2300, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Камара", "Максим Мантонов", "Осмотр", 120, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Ветровор", "Сергей Петрович", "Пломба", 1900, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Панкратор", "Егор Евгеньевич", "Удаление зуба", 1700, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Метроном", "Богдан Титомирович", "Осмотр", 190, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Мукоторг", "Багратион Федотович", "Отбеливание", 2000, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Гидромед", "Петр Константинович", "Удаление зуба", 1500, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Журавлев", "Артем Николаевич", "Пломба", 110, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Станков", "Никита Андреевич", "Протезирование", 5300, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Рукавов", "Святослав Олегович", "Удаление зуба", 1900, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Земля", "Артем Федорович", "Отбеливание", 170, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Рукомол", "Жак Пьеро", "Удаление зуба", 1600, 0));
+            Base.Add(new Stomat(Base.Count + 1, "Фирма", "Владислав Кириллович", "Удаление зуба", 1800, 1));
+            Base.Add(new Stomat(Base.Count + 1, "Нос", "Евгений Тихомирович", "Отбеливание", 130, 1));
 
             RefreshGrid();
         }
