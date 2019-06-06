@@ -160,7 +160,7 @@
             // 
             this.CardNumberNumeric.Location = new System.Drawing.Point(98, 7);
             this.CardNumberNumeric.Maximum = new decimal(new int[] {
-            20,
+            25,
             0,
             0,
             0});

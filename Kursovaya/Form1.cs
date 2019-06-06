@@ -13,7 +13,7 @@ namespace Kursovaya
 {
     public partial class Form1 : Form
     {
-        const int BaseCount = 20;                         //максимальное значение списка
+        const int BaseCount = 25;                         //максимальное значение списка
 
         List<Stomat> Base = new List<Stomat>(BaseCount); // Создание списка
 
@@ -137,7 +137,7 @@ namespace Kursovaya
                     Consol.AppendText("Ф.И.О. пациента: " + Base[i].getFullName() + "\t");
                     Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
                     Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
-                    Consol.AppendText("Задолженность: " + Base[i].WorkCost + "\r\n");
+                    Consol.AppendText("Задолженность: " + Base[i].WorkCost + "\r\n" + "\r\n");
                     counter++;
                 }
             }
@@ -201,7 +201,7 @@ namespace Kursovaya
             int counter = 0;
             for (int i = 0; i < BaseCount; i++)
             {
-                if (Base[i].getFamiliya().Equals(SearchNameTextBox.Text)) //выдача результатов при совпадении
+                if (Base[i].getFamiliya().Contains(SearchNameTextBox.Text)) //выдача результатов при совпадении
                 {
 
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
@@ -209,7 +209,7 @@ namespace Kursovaya
                     Consol.AppendText("Вид проделанной работы: " + Base[i].TypeOfWork + "\r\n");
                     Consol.AppendText("Стоимость: " + Base[i].WorkCost + "\r\n");
                     Consol.AppendText("Оплата: " + Base[i].Perevod() + "\r\n");
-                    Consol.AppendText("Должен врачу: " + Base[i].EstDolg() + "\r\n");
+                    Consol.AppendText("Должен врачу: " + Base[i].EstDolg() + "\r\n" + "\r\n");
                     counter++;
                 }
             }
@@ -258,7 +258,7 @@ namespace Kursovaya
             int counter = 0;
             for (int i = 0; i < BaseCount; i++)
             {
-                if (Base[i].TypeOfWork.Equals(SearchTypeBox.Text)) //информация по найденным пациентам
+                if (Base[i].TypeOfWork.Contains(SearchTypeBox.Text)) //информация по найденным пациентам
                 {
                     Consol.AppendText("№ карточки: " + Base[i].CardNumber.ToString() + "\t");
                     Consol.AppendText("Ф.И.О. пациента: " + Base[i].getFullName() + "\t");
